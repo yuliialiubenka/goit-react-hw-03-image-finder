@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { paramsForNotify } from '../App';
+import { paramsForNotify } from '../components/App';
 
 const URL = 'https://pixabay.com/api/';
 const API_KEY = '38889455-fd8af79455bb4793a4bd4120e';

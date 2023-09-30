@@ -6,7 +6,6 @@ import Image from '../../images/search.svg';
 
 class Searchbar extends Component {
     state = {
-        searchName: '',
         inputValue: '',
     };
 
@@ -16,9 +15,8 @@ class Searchbar extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        const searchQuery = event.target.elements.searchName.value.trim();
-        this.props.onSubmit(searchQuery);
-        event.target.reset();
+        this.props.onSubmit(this.state.inputValue.trim());
+        this.setState({ inputValue: '' })
     };
 
     render() {
